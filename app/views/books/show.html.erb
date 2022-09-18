@@ -1,0 +1,16 @@
+<h3>Title</h3>
+<p><%= @book.title %></p>
+
+<h3>Body</h3>
+<p><%= @book.body %></p>
+
+
+<%= link_to "編集", edit_book_path(@book.id) %>
+<%= link_to "削除", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+
+<script>
+  $(function(){
+    $(".alert").fadeOut(5000);
+  });
+</script>
+
